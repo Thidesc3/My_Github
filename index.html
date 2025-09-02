@@ -7,24 +7,57 @@
 </head>
 <body>
   <h1>Guia de Git e GitHub</h1>
-
   <section>
     <h2>O que é Git e GitHub?</h2>
-    <p><strong>Git</strong> é um sistema de controle de versão distribuído que permite gerenciar o histórico de alterações do código.</p>
-    <p><strong>GitHub</strong> é uma plataforma online que hospeda repositórios Git e facilita colaboração entre desenvolvedores.</p>
+    <p><strong>Git</strong> é um sistema de controle de versão distribuído que permite:</p>
+    <ul>
+      <li>Rastrear mudanças no código fonte</li>
+      <li>Gerenciar diferentes versões do projeto</li>
+      <li>Trabalhar em equipe sem conflitos</li>
+      <li>Reverter para versões anteriores quando necessário</li>
+      <li>Criar branches para desenvolver features isoladamente</li>
+    </ul>
+
+    <p><strong>GitHub</strong> é uma plataforma de hospedagem de código que oferece:</p>
+    <ul>
+      <li>Hospedagem de repositórios Git na nuvem</li>
+      <li>Interface web para gerenciar projetos</li>
+      <li>Ferramentas de colaboração como Pull Requests e Issues</li>
+      <li>Controle de acesso e permissões</li>
+      <li>Integração com outras ferramentas de desenvolvimento</li>
+      <li>Recursos para documentação como wikis e GitHub Pages</li>
+    </ul>
+
+    <p>Juntos, Git e GitHub formam um ecossistema essencial para o desenvolvimento moderno de software, permitindo:</p>
+    <ul>
+      <li>Colaboração eficiente entre equipes distribuídas</li>
+      <li>Versionamento seguro do código</li>
+      <li>Revisão de código através de Pull Requests</li>
+      <li>Rastreamento de problemas e melhorias</li>
+    </ul>
   </section>
 
     <section>
     <h2>Fluxo de Trabalho</h2>
     <ol>
-        <li>Adicionar todos os arquivos modificados ao commit: <code>git add .</code></li>
-        <li>Registrar as alterações com uma mensagem: <code>git commit -m "mensagem"</code></li>
-        <li>Enviar a branch para o repositório remoto: <code>git push origin nome-da-branch</code></li>
-        <li>Criar um Pull Request (PR) no GitHub para revisão e mesclagem das alterações.</li>
-        <li>Resolver conflitos, se houver, e atualizar a branch conforme necessário.</li>
-        <li>Mesclar o PR após aprovação.</li>
-        <li>Atualizar a branch local com as últimas alterações do remoto: <code>git pull origin nome-da-branch</code></li>
+      <li>Criar uma nova branch para sua feature: <code>git checkout -b feature/nome-feature</code></li>
+      <li>Verificar status das alterações: <code>git status</code></li>
+      <li>Adicionar todos os arquivos modificados ao commit: <code>git add .</code></li>
+      <li>Registrar as alterações com uma mensagem: <code>git commit -m "mensagem"</code></li>
+      <li>Enviar a branch para o repositório remoto: <code>git push origin nome-da-branch</code></li>
+      <li>Criar um Pull Request (PR) no GitHub para revisão e mesclagem das alterações.</li>
+      <li>Resolver conflitos, se houver, e atualizar a branch conforme necessário.</li>
+      <li>Mesclar o PR após aprovação.</li>
+      <li>Atualizar a branch local com as últimas alterações do remoto: <code>git pull origin nome-da-branch</code></li>
+      <li>Deletar branch local após mesclagem: <code>git branch -d nome-da-branch</code></li>
     </ol>
+    <p><strong>Dicas:</strong></p>
+    <ul>
+      <li>Use mensagens de commit claras e descritivas</li>
+      <li>Mantenha commits pequenos e focados</li>
+      <li>Sempre teste suas alterações antes de fazer push</li>
+      <li>Atualize sua branch regularmente com a main/develop</li>
+    </ul>
     </section>
 
   <section>
@@ -48,7 +81,26 @@ git commit -m "Minha primeira alteração"
 
 # Enviar branch para o remoto
 git push origin feature/minha-feature
+
+# Verificar status do repositório
+git status
+
+# Ver histórico de commits
+git log
+
+# Desfazer alterações não commitadas
+git checkout -- arquivo
+
+# Atualizar repositório local
+git pull origin main
+
+# Listar todas as branches
+git branch -a
+
+# Merge de branches (estando na branch destino)
+git merge nome-da-branch
     </pre>
+    <p><em>Importante: Sempre verifique em qual branch está antes de começar a trabalhar usando <code>git branch</code></em></p>
   </section>
 
   <section>
@@ -78,6 +130,17 @@ git add arquivo-com-conflito
 git commit -m "Conflito resolvido"
 git push origin develop
     </pre>
+    <h3>Dicas para Evitar Conflitos:</h3>
+    <ul>
+      <li>Mantenha sua branch atualizada com frequência</li>
+      <li>Comunique-se com a equipe sobre alterações em arquivos críticos</li>
+      <li>Divida grandes alterações em commits menores</li>
+      <li>Use rebase em vez de merge quando apropriado</li>
+    </ul>
   </section>
+
+  <footer>
+    <p>Para mais informações, consulte a <a href="https://docs.github.com">documentação oficial do GitHub</a></p>
+  </footer>
 </body>
 </html>
