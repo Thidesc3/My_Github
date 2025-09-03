@@ -2,23 +2,27 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 20px;
-    background: #f5f5f5;
-    color: #333;
+    background: #150000;
+    color: #ffffff;
 }
-h1, h2, h3 {
-    color: #0056b3;
+h1{
+    color: #00ff00;
+    text-align: center;
+}
+h2, h3 { 
+    color: #00e408;
 }
 pre {
-    background: #222;
-    color: #eee;
+    background: #000000;
+    color: #00b92b;
     padding: 10px;
     border-radius: 5px;
     overflow-x: auto;
 }
 section {
-    background: white;
+    background: rgb(113, 113, 113);
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 6px rgba(0, 216, 29, 0.1);
 }
